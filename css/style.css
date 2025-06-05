@@ -1512,6 +1512,63 @@ ul {
     position: relative;
     z-index: 2;
 }
+.footer-bottom {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.developer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.developer-text {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.developer-logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        justify-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .developer {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .developer-text {
+        white-space: normal; /* Allow text wrapping */
+        order: 2; /* Move text below logo */
+    }
+    
+    .developer-logo {
+        order: 1; /* Move logo above text */
+    }
+}
 
 .copyright {
     color: rgba(255, 255, 255, 0.5);
